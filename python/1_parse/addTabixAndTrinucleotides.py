@@ -94,8 +94,9 @@ def addSnpInfo(mutation, tabixInfo):
                info['POS'] == pos and
                info['REF'] == mutation['REF'] and
                info['ALT'] == mutation['ALT'] and
-               info['FILTER'] == "PASS" and
-               info['INFO']['VT'] == "SNP"):
+               info['FILTER'] == "PASS"):
+                #and
+                #info['INFO']['VT'] == "SNP"):
                 mutation['1KG_AF'] = info['INFO'].get('AF', zero)
 
                 #print(f"Set SNP info for {key} to AF = {mutation['1KG_AF']}", file = sys.stderr)
